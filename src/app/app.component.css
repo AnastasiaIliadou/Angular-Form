@@ -1,0 +1,36 @@
+body { background-color: #fcf5fd !important; }
+
+.button-wrapper {
+    box-shadow: inset 0 5px 0 0 #cbc0d3;
+}
+.button {
+    
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #cbc0d3;
+    outline: 0;
+    border: 1px solid #cbc0d3; /* Add border styling here */
+    border-radius: 1px; /* Adjusted border-radius */
+    background-color: #cbc0d3;
+    transition: background 0.7s linear;
+}
+
+.activebutton {
+    background: #edd3ef linear-gradient(to bottom, #cdb4db 5%, #b6aabe 100%);
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 0 #dcecfb;
+    border: 1px solid #cbc0d3;
+    color: #000000;
+    text-shadow: 0 1px 0 #cdb4db;
+}
+
+/* Additional hover effect for the entire button */
+.button:hover {
+    background: #bcabc9;
+}

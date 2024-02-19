@@ -1,0 +1,37 @@
+<div *ngIf="userData" [hidden]="!submitted" class="user-display-container">
+    <h2>You submitted the following:</h2>
+    <style>
+      .col-xs-9-custom {
+        margin-left: 30px; /* Adjust the margin as needed */
+      }
+    </style>
+    <div class="row">
+      <div class="col-xs-3"><strong>Name:</strong></div>
+      <div class=" col-xs-9 col-xs-9-custom">{{ userData?.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3"><strong>Surname:</strong></div>
+      <div class="col-xs-9 col-xs-9-custom">{{ userData?.surname }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3"><strong>Home Address:</strong></div>
+      <div class="col-xs-9 col-xs-9-custom">{{ userData?.homeAddress }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3"><strong>Work Address:</strong></div>
+      <div class="col-xs-9 col-xs-9-custom">{{ userData?.workAddress }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3"><strong>Gender:</strong></div>
+      <div class="col-xs-9 col-xs-9-custom">{{ userData?.gender }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3"><strong>BirthDate:</strong></div>
+      <div class="col-xs-9 col-xs-9-custom">{{ userData?.birthDate }}</div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" style="background-color: #ad64d8;" (click)="editUserData()">Edit</button>
+  </div>
+
+  
+  

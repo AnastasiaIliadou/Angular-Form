@@ -1,0 +1,107 @@
+<!-- register-user.component.html 
+<h3>Register New User</h3> -->
+<br>
+<br>
+<br>
+
+
+<div class="no-style" style="margin-left: 4px">
+    <div class="container">
+      <img src='https://cdn.iconscout.com/icon/premium/png-512-thumb/login-and-password-8001367-6479595.png?f=webp&w=256' alt='image' width='105'>
+      <div *ngIf="!submitted">
+
+        <h3>{{ successMessage  }}</h3>
+        <h1>User Form</h1>
+
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+          <!-- Your form fields -->
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <span style="color:red"> *</span>
+            <input type="text" class="form-control" id="name"
+            required
+            [(ngModel)]="userData.name" name="name" 
+            #name="ngModel">
+            <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="surname">Surname</label>
+            <span style="color:red"> *</span>
+            <input type="text" class="form-control" id="surname" 
+            required
+            [(ngModel)]="userData.surname"  name="surname" 
+            #surname="ngModel">
+            <div [hidden]="surname.valid || surname.pristine"
+            class="alert alert-danger">
+            SurName is required
+           </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="homeaddress">Home Address</label>
+            <input type="text" class="form-control" id="homeaddress" 
+            [(ngModel)]="userData.homeAddress" name="homeaddress"
+            #homeaddress="ngModel">
+          </div>
+
+
+
+          <div class="form-group">
+            <label for="workaddress"> Work Address </label>
+            <input type="text" class="form-control" id="workaddress"
+            [(ngModel)]="userData.workAddress" name="workAddress" 
+            #workaddress="ngModel">
+          </div>
+
+
+          <div class="form-group">
+            <label for="gender" class="control-label">Gender
+              <span style="color:red"> *</span>
+            </label>
+            <select id="gender" class="form-control" 
+            required
+            [(ngModel)]="userData.gender" name="gender"
+            #gender="ngModel">
+            <div [hidden]="gender.valid || gender.pristine"
+            class="alert alert-danger">
+            SurName is required
+           </div>
+              <option value="">Select One</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+
+          <div class="form-group"> <!-- Date input -->
+            <label class="control-label" for="birthDate">BirthDate
+              <span style="color:red"> *</span>
+            </label>
+            <input class="form-control" id="birthDate"  type="date"
+            required
+            [(ngModel)]="userData.birthDate" name="birthDate"
+            #birthDate="ngModel">
+            <div [hidden]="birthDate.valid || birthDate.pristine"
+            class="alert alert-danger">
+            SurName is required
+           </div>
+          </div>
+
+
+          
+          <button type="submit" class="btn btn-success" style="background-color: #ad64d8;" [disabled]="!userForm.form.valid">Submit</button>
+          <!--<button type="button" class="btn btn-default" (click)="newUser(); userForm.reset()">New Hero</button> -->
+  
+        </form>
+      </div>
+
+        
+
+    
+

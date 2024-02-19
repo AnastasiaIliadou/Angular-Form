@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<div class="button-wrapper">
+<nav>
+  <a class="button"
+     routerLink="/homepage"
+     routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">
+    HomePage
+  </a> 
+  <a class="button"
+     routerLink="/register-user"
+     routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">
+    Register
+  </a> 
+  <a class="button"
+  routerLink="/display-users"
+  routerLinkActive="activebutton"
+  ariaCurrentWhenActive="page">
+ Display User
+</a>
+</nav>
+
+<router-outlet></router-outlet>
+</div>
+
+<div style="display: none;">
+  <!-- This HTML represents the initial state for the tutorial. It is not intended to appear in the app. -->
+  <app-homepage></app-homepage>
+
+  <app-register-user></app-register-user>
+  
+  <app-display-users></app-display-users>
+ 
+
+  
+  
+  </div>
